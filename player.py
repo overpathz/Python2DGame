@@ -8,7 +8,7 @@ pg.init()
 
 class Player:
     def __init__(self):
-        self.body = idle
+        self.body = idlePlayer
         self.hp = 100
         self.attack = 20
         self.x = screenWidth // 2
@@ -68,20 +68,23 @@ class Player:
             self.animCount = 0
 
         if self.right:
-            self.body = walkRight
+            self.body = walkRightPlayer
             sc.blit(self.body[self.animCount // 5], (self.x, self.y))
             self.animCount += 1
         elif self.left:
-            self.body = walkLeft
+            self.body = walkLeftPlayer
             sc.blit(self.body[self.animCount // 5], (self.x, self.y))
             self.animCount += 1
         elif self.isJumping:
-            self.body = jumpUp
+            self.body = jumpUpPlayer
             sc.blit(self.body[self.animCount // 5], (self.x, self.y))
             self.animCount += 1
         elif self.standing:
-            self.body = idle
+            self.body = idlePlayer
             sc.blit(self.body, (self.x, self.y))
             self.animCount += 1
+
+    def fire(self):
+        pass
 
 

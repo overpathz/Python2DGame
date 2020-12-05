@@ -4,15 +4,18 @@ from display import*
 from player import*
 from images import*
 from sounds import*
+from enemy import *
 
 pg.init()
 
 clock = pg.time.Clock()
 running = True
 player = Player()
+enemy = Enemy()
+all_btn_bullets = []
 
 
-# main function which starts the game
+# main function which starts the game / main game loop, which checks all game events
 def run():
     global running
     while running:
@@ -26,6 +29,7 @@ def run():
         drawWindow()
 
         player.movement()
+        enemy.movement()
 
         pg.display.update()
 

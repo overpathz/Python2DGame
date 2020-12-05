@@ -13,7 +13,7 @@ class Enemy:
         self.attack = 20
         self.x = screenWidth // 2
         self.y = 494
-        self.speed = PLAYER_SPEED
+        self.speed = PLAYER_SPEED + 1
         self.width = PLAYER_WIDTH
         self.height = PLAYER_HEIGHT
         self.isJump = False
