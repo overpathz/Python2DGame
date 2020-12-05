@@ -84,4 +84,4 @@ class Player:
             sc.blit(self.body, (self.x, self.y))
             self.animCount += 1
 
-        pg.display.update()
+
