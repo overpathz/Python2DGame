@@ -2,7 +2,6 @@ from settings import*
 from images import *
 from display import *
 
-
 class Bullet:
     def __init__(self, x, y):
         self.x = x
